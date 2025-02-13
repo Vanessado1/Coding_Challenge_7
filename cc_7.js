@@ -13,3 +13,19 @@ function calculateHourlyWage(salary, hoursPerWeek) {
 }
 console.log(`Hourly Wage: $${calculateHourlyWage(52000, 40)}`); // Expected output: "Hourly Wage: $25.00"
 console.log(`Hourly Wage: $${calculateHourlyWage(75000, 35)}`); // Expected output: "Hourly Wage: $41.21"
+
+// Task 3: Arrow Function 
+// created an arrow function to calculate a discount based of the number of years 
+const calculateLoyaltyDiscount = (amount, years) => {
+   let discount = 0;
+   if (years >= 5) {
+      discount = 0.15;
+   } else if (years >= 3) {
+      discount = 0.10;
+   } else {
+      discount = 0.05;
+   }
+   return amount - (amount * discount);
+}
+console.log(`Discounted Price: $${calculateLoyaltyDiscount(100, 6)}`); // Expected output: "Discounted Price: $85.00"
+console.log(`Discounted Price: $${calculateLoyaltyDiscount(200, 2)}`); // Expected output: "Discounted Price: $190.00"
