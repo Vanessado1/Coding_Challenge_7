@@ -50,3 +50,11 @@ const calculateShippingCost = (weight, location, expedited = false) => {
 }
 console.log(`Shipping Cost: $${calculateShippingCost(10, "USA", true)}`);// Expected output: "Shipping Cost: $20.00"
 console.log(`Shipping Cost: $${calculateShippingCost(5, "Canada", false)}`); // Expected output: "Shipping Cost: $13.50"
+
+// Task 5: Returning Values 
+// created a function to calculate the amount of interest 
+function calculateLoanInterest(principal, rate, years) {
+   return Math.round(principal * rate * years)
+}
+console.log(`Total Interest: $${calculateLoanInterest(1000, 0.05, 3)}`); // Expected output: "Total Interest: $150.00"
+console.log(`Total Interest: $${calculateLoanInterest(5000, 0.07, 5)}`); // Expected output: "Total Interest: $1750.00"
