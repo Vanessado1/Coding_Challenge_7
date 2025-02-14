@@ -72,4 +72,17 @@ let transactions = [500, 1200, 3000, 800, 2200];
 function filterHighValueTransactions(transactions, filterTransaction) {
    return transactions.filter(filterTransaction);
 }
-console.log(filterHighValueTransactions(transactions, amount => amount > 1000));
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected output: [1200, 3000, 2200]
+
+// Task 7: Closures 
+// created a budget tracker function 
+function createBudgetTracker() {
+   let totalBudget = 0;
+   return function(expenses) {
+      totalBudget -= expenses;
+      return `Current Balance: $${totalBudget}`;
+   };
+}
+let budget = createBudgetTracker();
+console.log(budget(300)); // Expected output: "Current Balance: -$300"
+console.log(budget(200)); // Expected output: "Current Balance: -$500"
